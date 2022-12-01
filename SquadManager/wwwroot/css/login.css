@@ -1,0 +1,54 @@
+﻿.auth-container {
+    margin: 10rem auto;
+    display: flex;
+    border: none;
+    flex-direction: column;
+    max-width: 35rem;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    gap: 0.6rem;
+}
+
+h1 {
+    margin-top: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+input, textarea {
+    margin-top: 20px;
+    padding: 0.6rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.form-container a {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+button {
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    background-color: #9BE564;
+    transition: 0.3s;
+    border-radius: 5px;
+    height: 2.5rem;
+}
+
+    button:hover {
+        background-color: #72BF36;
+    }
+
+label {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 1rem;
+}
