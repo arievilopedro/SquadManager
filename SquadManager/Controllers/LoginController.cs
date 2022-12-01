@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FluentValidation.Results;
+using Microsoft.AspNetCore.Mvc;
 using SquadManager.Models;
+using SquadManager.Validator;
 
 namespace SquadManager.Controllers
 {
@@ -8,6 +10,18 @@ namespace SquadManager.Controllers
         public IActionResult Index()
         {
             UserViewModel user = new UserViewModel();
+
+            UserValidator validator = new UserValidator();
+
+            ValidationResult result = validator.Validate(user);
+
+            if (!result.IsValid)
+            {
+                foreach(var failure in result.Errors) 
+                {
+                    Console.WriteLine("Falhou na validação" + " ");
+                }
+            }
 
             return View("Index", user);
         }
