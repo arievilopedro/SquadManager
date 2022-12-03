@@ -8,11 +8,11 @@
         <h1>Login</h1>
 
         <div class="form-container">
-        <form action="/Login/Test" method="post">
-            <input type="text" name="email" value="@Model.Email" placeholder="Username/E-mail" />
-            <input type="password" name="password" value="@Model.Password" placeholder="Password" />
+        <form>
+            <input type="text" id="email" name="email" value="@Model.Email" placeholder="Username/E-mail" />
+            <input type="password" required id="password" name="password" value="@Model.Password" placeholder="Password" />
             <a href="#">Esqueceu a Senha?</a>
-            <button type="submit">Login</button>
+            <button type="submit" onclick="login(evento);">Login</button>
         </form>
         </div>
         <label>
@@ -20,3 +20,8 @@
         </label>
     </section>
 </div>
+
+<a href="~/lib/jquery/dist/jquery.min.map">~/lib/jquery/dist/jquery.min.map</a>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/login.js"></script>

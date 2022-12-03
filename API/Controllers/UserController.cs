@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Commom;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -7,8 +8,13 @@ namespace API.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult Login(string username, string password)
+        /// <summary>
+        /// Autentica o usuário
+        /// </summary>
+        /// <param name="user">Username e Senha do usuário</param>
+        /// <returns>OK se estiver logado</returns>
+        [HttpPost]
+        public IActionResult Login(UserModel user)
         {
             return Ok(new {response = "Está Logado!"});
         }
